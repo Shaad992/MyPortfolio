@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile with Centered Navigation</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <div class="main-container">
-     <div class="profile-widget">
+
+    <div class="visitor-counter">
+        <div class="counter-card">
+            <div class="counter-icon">👋</div>
+            <div class="counter-text">
+                You're visitor <span class="counter-number" id="visit-count">00</span>
+            </div>
+            <div class="counter-pulse"></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="profile-widget">
             <div class="profile-circle">
                 <div class="image-container">
                     <img src="https://i.ibb.co/7xrGXXj3/Picsart-25-10-18-21-53-23-709.jpg" alt="Naushad Ahmad - Web Developer" />
@@ -23,7 +34,10 @@
                 <div class="paper-content">
                     <div class="accent-line"></div>
                     <div class="info-content">
-                        <div class="name">Naushad Ahmad</div>
+                        <div class="name">
+                            <span id="typing-text"></span>
+                            <span class="typing-cursor">|</span>
+                        </div>
                         <div class="title">Web Developer</div>
                         <div class="location">
                             <i class="fas fa-map-marker-alt"></i> Moradabad, India
@@ -43,13 +57,14 @@
             </div>
         </div>
 
-<div class="nav-container">
-    <button class="nav-button">Skill</button> 
-    <a href="project.html" class="nav-button">Project</a>
-    <a href="contact.html" class="nav-button">Contact Us</a>
-    <a href="about.html" class="nav-button">About Us</a>
-</div>
- <div class="netlify-container">
+        <div class="nav-container">
+            <button class="nav-button">Skill</button> 
+            <a href="project.html" class="nav-button">Project</a>
+            <a href="contact.html" class="nav-button">Contact Us</a>
+            <a href="about.html" class="nav-button">About Us</a>
+        </div>
+
+        <div class="netlify-container">
             <a href="https://reddybookclubonline.netlify.app" target="_blank" class="netlify-button">
                 <div class="netlify-icon">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -60,59 +75,69 @@
             </a>
         </div>
     </div>
-<div class="quote-container">
-    <div class="quote-card">
-        <div class="quote-header">
-            <span class="quote-icon">🚀</span>
-            <h3 class="quote-title">MY DEVELOPMENT JOURNEY</h3>
-        </div>
-        <div class="quote-content">
-            <p class="quote-text">No laptop? No course? No problem! I turn mobile limitations into digital innovations</p>
-        </div>
-        <div class="quote-features">
-            <div class="feature-item">Self-Taught on Mobile</div>
-            <div class="feature-item">Passion-Driven Projects</div>
-            <div class="feature-item">Solution-Focused Mindset</div>
-        </div>
-    </div>
-</div>
 
-<div class="quote-container">
-    <div class="quote-card">
-        <div class="quote-header">
-            <span class="quote-icon">📚</span>
-            <h3 class="quote-title">MY CODING PHILOSOPHY</h3>
-        </div>
-        <div class="quote-content">
-            <p class="quote-text">From Physics formulas to code functions - every problem has a solution waiting to be built</p>
-        </div>
-        <div class="quote-features">
-            <div class="feature-item">12th PCM to Web Developer</div>
-            <div class="feature-item">Curiosity + AI = Learning</div>
-            <div class="feature-item">Never Stop Exploring</div>
-        </div>
-    </div>
-</div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
 
-<div class="quote-container">
-    <div class="quote-card">
-        <div class="quote-header">
-            <span class="quote-icon">🔥</span>
-            <h3 class="quote-title">MY WORK ETHICS</h3>
-        </div>
-        <div class="quote-content">
-            <p class="quote-text">Professional tools don't make developers - passion, persistence and problem-solving do!</p>
-        </div>
-        <div class="quote-features">
-            <div class="feature-item">Coding on Mobile Since Day 1</div>
-            <div class="feature-item">Every Project = New Challenge</div>
-            <div class="feature-item">Delivering Despite Limitations</div>
+    <div class="quote-container">
+        <div class="quote-card">
+            <div class="quote-header">
+                <span class="quote-icon">🚀</span>
+                <h3 class="quote-title">MY DEVELOPMENT JOURNEY</h3>
+            </div>
+            <div class="quote-content">
+                <p class="quote-text">No laptop? No course? No problem! I turn mobile limitations into digital innovations</p>
+            </div>
+            <div class="quote-features">
+                <div class="feature-item">Self-Taught on Mobile/Pc</div>
+                <div class="feature-item">Passion-Driven Projects</div>
+                <div class="feature-item">Solution-Focused Mindset</div>
+            </div>
         </div>
     </div>
-</div>
-       <div class="skills-section" id="skills-section">
+
+    <div class="quote-container">
+        <div class="quote-card">
+            <div class="quote-header">
+                <span class="quote-icon">📚</span>
+                <h3 class="quote-title">MY CODING PHILOSOPHY</h3>
+            </div>
+            <div class="quote-content">
+                <p class="quote-text">From Physics formulas to code functions - every problem has a solution waiting to be built</p>
+            </div>
+            <div class="quote-features">
+                <div class="feature-item">Mobile/Pc Web Developer</div>
+                <div class="feature-item">Curiosity + AI = Learning</div>
+                <div class="feature-item">Never Stop Exploring</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-container">
+        <div class="quote-card">
+            <div class="quote-header">
+                <span class="quote-icon">🔥</span>
+                <h3 class="quote-title">MY WORK ETHICS</h3>
+            </div>
+            <div class="quote-content">
+                <p class="quote-text">Professional tools don't make developers - passion, persistence and problem-solving do!</p>
+            </div>
+            <div class="quote-features">
+                <div class="feature-item">Coding on Mobile Since Day 1</div>
+                <div class="feature-item">Every Project = New Challenge</div>
+                <div class="feature-item">Delivering Despite Limitations</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-section" id="skills-section">
         <h3 class="skills-title">Technologies I Work With</h3>
         <div class="icons-grid">
+            <!-- Your existing skills icons remain same -->
             <div class="icon-item">
                 <div class="icon-wrapper">
                     <svg viewBox="0 0 128 128">
