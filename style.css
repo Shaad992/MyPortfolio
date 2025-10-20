@@ -1461,3 +1461,287 @@ body, html {
         flex-direction: column;
     }
 }
+.visitor-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+}
+
+.counter-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    animation: slideInRight 0.6s ease-out;
+}
+
+.counter-icon {
+    font-size: 20px;
+    animation: bounce 2s infinite;
+}
+
+.counter-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.counter-number {
+    color: #ffd700;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 4px;
+}
+
+.counter-pulse {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background: #25D366;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.typing-cursor {
+    color: #ffd700;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #ffd700;
+    border-radius: 50%;
+    color: #ffd700;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+}
+
+.back-to-top:active {
+    transform: translateY(-1px);
+}
+
+.back-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ffd700;
+}
+
+.back-to-top.show {
+    display: flex;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .visitor-counter {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .counter-card {
+        padding: 12px 16px;
+        gap: 10px;
+    }
+    
+    .counter-icon {
+        font-size: 18px;
+    }
+    
+    .counter-text {
+        font-size: 12px;
+    }
+    
+    .counter-number {
+        font-size: 14px;
+    }
+    
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .back-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .visitor-counter {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .counter-card {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+    
+    .counter-text {
+        font-size: 11px;
+    }
+    
+    .counter-number {
+        font-size: 13px;
+    }
+    
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .back-to-top svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.visitor-counter {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 10000;
+}
+
+.counter-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border: 2px solid #ffd700;
+    border-radius: 15px;
+    padding: 16px 20px;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    animation: slideInRight 0.6s ease-out;
+    max-width: 280px;
+}
+
+.main-container {
+    position: relative;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .visitor-counter {
+        top: 2px;
+        right: 10px;
+    }
+    
+    .counter-card {
+        padding: 5px 20px;
+        max-width: 100px;
+    }
+    
+    .counter-text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .visitor-counter {
+        top: 5px;
+        right: 0;
+    }
+    
+    .counter-card {
+        padding: 8px 20px;
+        max-width: 200px;
+        gap: 5px;
+    }
+    
+    .counter-text {
+        font-size: 8px;
+    }
+    
+    .counter-number {
+        font-size: 5px;
+    }
+        }
